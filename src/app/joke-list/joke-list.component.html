@@ -1,0 +1,15 @@
+<!-- <accordion *ngFor="let joke of jokes">
+  <accordion-group heading={{joke.setup}}
+  panelClass='customClass'>
+      {{joke.punchline}}
+    </accordion-group>
+  </accordion> -->
+
+<!-- <div class="card card-block" 
+  *ngFor="let joke of jokes">
+  <h4 class="card-title" >{{joke.setup}}</h4>
+  <p class="card-text" [hidden]='joke.hide'>{{joke.punchline}}</p>
+  <a class="btn btn-primary" (click)="joke.toggle()">Tell Me</a>
+</div> -->
+<app-joke-form (jokeCreated)="addJoke($event)"></app-joke-form>
+<app-joke *ngFor='let j of jokes' [joke]="j"></app-joke>
